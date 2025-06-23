@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portofolio Arya Ramadhani</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Selamat Datang</h1>
+    <h2>Saya Arya Ramadhani</h2>
+    <p>Mahasiswa Teknik Informatika | Web Developer Pemula</p>
+
+    <div class="button-group">
+      <button onclick="showSection('tentang')">Tentang Saya</button>
+      <button onclick="showSection('kontak')">Kontak Email</button>
+      <button onclick="showSection('linkedin')">LinkedIn</button>
+    </div>
+
+    <div id="tentang" class="section hidden">
+      <h3>Tentang Saya</h3>
+      <p>
+        Saya adalah mahasiswa Teknik Informatika di Universitas Pamulang. Saya memiliki minat dalam pengembangan web, terutama HTML, CSS, dan sedikit JavaScript. Saya suka belajar teknologi baru dan membuat aplikasi web sederhana.
+      </p>
+    </div>
+
+    <div id="kontak" class="section hidden">
+      <h3>Kontak Email</h3>
+      <p>Email: aryaramadhani@email.com</p>
+    </div>
+
+    <div id="linkedin" class="section hidden">
+      <h3>LinkedIn Saya</h3>
+      <p>
+        <a href="https://www.linkedin.com/in/arya-ramadhani-172149371" target="_blank">
+          Kunjungi Profil LinkedIn
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(s => s.classList.add('hidden'));
+      document.getElementById(id).classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>
